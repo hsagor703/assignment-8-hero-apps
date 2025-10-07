@@ -1,0 +1,326 @@
+[
+  {
+    "image": "https://shorturl.at/tHKLv",
+    "title": "Spotify",
+    "companyName": "Spotify AB",
+    "id": 1,
+    "description": "Spotify is a music streaming app that offers millions of tracks, albums, and podcasts. You can create and share playlists, follow artists, and explore new music based on your listening taste. With Spotify Premium, users enjoy offline playback, ad-free streaming, and high-quality audio. The app also curates personalized mixes like Discover Weekly to keep your experience fresh.",
+    "size": 110,
+    "reviews": 25300000,
+    "ratingAvg": 4.5,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 200000 },
+      { "name": "2 star", "count": 400000 },
+      { "name": "3 star", "count": 1200000 },
+      { "name": "4 star", "count": 3500000 },
+      { "name": "5 star", "count": 20000000 }
+    ]
+  },
+  {
+    "image": "https://shorturl.at/gHGb9",
+    "title": "Instagram",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 2,
+    "description": "Instagram lets you capture and share life’s moments with photos, videos, and stories. It offers tools for creative editing, filters, and reels for short videos. Users can connect with friends, follow influencers, and discover trends through hashtags and the Explore tab. Businesses and creators use Instagram to reach global audiences and grow communities.",
+    "size": 95,
+    "reviews": 32000000,
+    "ratingAvg": 4.4,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 450000 },
+      { "name": "2 star", "count": 750000 },
+      { "name": "3 star", "count": 2100000 },
+      { "name": "4 star", "count": 5200000 },
+      { "name": "5 star", "count": 25000000 }
+    ]
+  },
+  {
+    "image": "https://shorturl.at/bHFQe",
+    "title": "Facebook",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 3,
+    "description": "Facebook helps you stay connected with friends, family, and communities. You can share posts, photos, and videos or join groups and pages that match your interests. The Marketplace feature allows buying and selling locally. With regular updates, Facebook remains a key hub for communication, business, and social discovery worldwide.",
+    "size": 180,
+    "reviews": 54000000,
+    "ratingAvg": 4.1,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 900000 },
+      { "name": "2 star", "count": 1200000 },
+      { "name": "3 star", "count": 4000000 },
+      { "name": "4 star", "count": 11000000 },
+      { "name": "5 star", "count": 37000000 }
+    ]
+  },
+  {
+    "image": "https://shorturl.at/dsGuX",
+    "title": "WhatsApp Messenger",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 4,
+    "description": "WhatsApp lets you send text, voice, and video messages securely with end-to-end encryption. You can share documents, photos, and locations, and make group calls easily. Its fast, reliable connection works on both mobile and desktop. Businesses use WhatsApp to connect directly with customers through WhatsApp Business.",
+    "size": 90,
+    "reviews": 35000000,
+    "ratingAvg": 4.7,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 150000 },
+      { "name": "2 star", "count": 250000 },
+      { "name": "3 star", "count": 1000000 },
+      { "name": "4 star", "count": 4500000 },
+      { "name": "5 star", "count": 29000000 }
+    ]
+  },
+  {
+    "image": "https://shorturl.at/4y2yA",
+    "title": "TikTok",
+    "companyName": "ByteDance Ltd.",
+    "id": 5,
+    "description": "TikTok allows users to create and explore short, entertaining videos. With tons of effects, sounds, and filters, it’s a hub for creativity. From dances to tutorials, TikTok’s algorithm learns what you love and delivers endless entertainment. It has become a powerful platform for creators and brands alike.",
+    "size": 150,
+    "reviews": 21000000,
+    "ratingAvg": 4.3,
+    "downloads": 3000000000,
+    "ratings": [
+      { "name": "1 star", "count": 300000 },
+      { "name": "2 star", "count": 500000 },
+      { "name": "3 star", "count": 1300000 },
+      { "name": "4 star", "count": 4000000 },
+      { "name": "5 star", "count": 15000000 }
+    ]
+  },
+  {
+    "image": "https://tinyurl.com/mr2pp3ky",
+    "title": "YouTube",
+    "companyName": "Google LLC",
+    "id": 6,
+    "description": "YouTube is the most popular platform for watching and sharing videos. From tutorials to entertainment, users can find anything they like. Creators can earn income through ads and memberships. YouTube Premium offers ad-free viewing, background play, and offline downloads for an uninterrupted experience.",
+    "size": 120,
+    "reviews": 41000000,
+    "ratingAvg": 4.6,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 200000 },
+      { "name": "2 star", "count": 400000 },
+      { "name": "3 star", "count": 1300000 },
+      { "name": "4 star", "count": 6000000 },
+      { "name": "5 star", "count": 33000000 }
+    ]
+  },
+  {
+    "image": "https://tinyurl.com/mhwyw68w",
+    "title": "Snapchat",
+    "companyName": "Snap Inc.",
+    "id": 7,
+    "description": "Snapchat lets you send disappearing photos and videos called Snaps. It includes filters, Bitmoji, and AR lenses for fun communication. Users can share daily moments through Stories and explore new content on Discover. Its privacy-first approach makes it popular among young audiences.",
+    "size": 95,
+    "reviews": 12000000,
+    "ratingAvg": 4.2,
+    "downloads": 2000000000,
+    "ratings": [
+      { "name": "1 star", "count": 250000 },
+      { "name": "2 star", "count": 400000 },
+      { "name": "3 star", "count": 1000000 },
+      { "name": "4 star", "count": 2800000 },
+      { "name": "5 star", "count": 7500000 }
+    ]
+  },
+  {
+    "image": "https://tinyurl.com/nj56u9bp",
+    "title": "X (Twitter)",
+    "companyName": "X Corp.",
+    "id": 8,
+    "description": "X, previously known as Twitter, is a social media app for real-time conversations and updates. Users share short posts, follow trending topics, and join discussions. It’s widely used for news, politics, and entertainment. The platform now includes Spaces, long-form posts, and monetization options for creators.",
+    "size": 100,
+    "reviews": 22000000,
+    "ratingAvg": 4.1,
+    "downloads": 2000000000,
+    "ratings": [
+      { "name": "1 star", "count": 400000 },
+      { "name": "2 star", "count": 600000 },
+      { "name": "3 star", "count": 1800000 },
+      { "name": "4 star", "count": 4200000 },
+      { "name": "5 star", "count": 15000000 }
+    ]
+  },
+  {
+    "image": "https://tinyurl.com/mrwk2ptf",
+    "title": "Telegram",
+    "companyName": "Telegram FZ-LLC",
+    "id": 9,
+    "description": "Telegram offers secure, fast messaging with powerful features like channels, bots, and cloud storage. It supports media sharing up to 2GB per file and syncs across devices seamlessly. Telegram is known for privacy, speed, and a community-driven approach. It’s ideal for both casual and professional communication.",
+    "size": 80,
+    "reviews": 9000000,
+    "ratingAvg": 4.7,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 120000 },
+      { "name": "2 star", "count": 200000 },
+      { "name": "3 star", "count": 600000 },
+      { "name": "4 star", "count": 2200000 },
+      { "name": "5 star", "count": 5900000 }
+    ]
+  },
+  {
+    "image": "https://tinyurl.com/253v23x5",
+    "title": "Netflix",
+    "companyName": "Netflix, Inc.",
+    "id": 10,
+    "description": "Netflix lets users stream thousands of movies, series, and documentaries. It offers content across multiple languages and genres. Users can download episodes for offline viewing and set up separate profiles. Netflix Originals like Stranger Things and Money Heist have redefined digital entertainment.",
+    "size": 180,
+    "reviews": 15000000,
+    "ratingAvg": 4.5,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 200000 },
+      { "name": "2 star", "count": 300000 },
+      { "name": "3 star", "count": 1000000 },
+      { "name": "4 star", "count": 3800000 },
+      { "name": "5 star", "count": 9500000 }
+    ]
+  },
+  {
+    "image": "https://tinyurl.com/mu379bmj",
+    "title": "Gmail",
+    "companyName": "Google LLC",
+    "id": 11,
+    "description": "Gmail is a free email service by Google, offering a clean and powerful interface. It includes smart categorization, spam protection, and integration with Google Drive and Meet. With 15GB of free storage, Gmail is widely used for both personal and business communication. It also supports multiple accounts and dark mode.",
+    "size": 60,
+    "reviews": 29000000,
+    "ratingAvg": 4.6,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 150000 },
+      { "name": "2 star", "count": 300000 },
+      { "name": "3 star", "count": 800000 },
+      { "name": "4 star", "count": 3200000 },
+      { "name": "5 star", "count": 24500000 }
+    ]
+  },
+  {
+    "image": "https://tinyurl.com/2nb6888w",
+    "title": "Zoom Cloud Meetings",
+    "companyName": "Zoom Video Communications, Inc.",
+    "id": 12,
+    "description": "Zoom enables video meetings, webinars, and online collaboration. It provides HD video, chat, and screen sharing features for personal and professional use. With breakout rooms and recording options, Zoom is perfect for remote teams. The app is used globally for classes, meetings, and conferences.",
+    "size": 130,
+    "reviews": 8000000,
+    "ratingAvg": 4.3,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 100000 },
+      { "name": "2 star", "count": 150000 },
+      { "name": "3 star", "count": 700000 },
+      { "name": "4 star", "count": 2200000 },
+      { "name": "5 star", "count": 4800000 }
+    ]
+  },
+  {
+    "image": "https://tinyurl.com/b5nvv9h3",
+    "title": "Canva",
+    "companyName": "Canva Pty Ltd",
+    "id": 13,
+    "description": "Canva is a design tool that lets anyone create stunning visuals easily. You can design posters, social media posts, and presentations using pre-made templates. Canva Pro offers advanced tools and brand kits for businesses. It’s ideal for designers, marketers, and students alike.",
+    "size": 120,
+    "reviews": 7000000,
+    "ratingAvg": 4.8,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 70000 },
+      { "name": "2 star", "count": 120000 },
+      { "name": "3 star", "count": 400000 },
+      { "name": "4 star", "count": 1700000 },
+      { "name": "5 star", "count": 4700000 }
+    ]
+  },
+  {
+    "image": "https://tinyurl.com/24929p7p",
+    "title": "Uber",
+    "companyName": "Uber Technologies, Inc.",
+    "id": 14,
+    "description": "Uber connects riders with drivers in minutes. You can book rides, estimate fares, and track your trip in real-time. Uber offers multiple ride options from affordable to premium. It also provides safety features, digital payments, and 24/7 support.",
+    "size": 85,
+    "reviews": 21000000,
+    "ratingAvg": 4.5,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 250000 },
+      { "name": "2 star", "count": 350000 },
+      { "name": "3 star", "count": 900000 },
+      { "name": "4 star", "count": 3000000 },
+      { "name": "5 star", "count": 16000000 }
+    ]
+  },
+  {
+    "image": "https://tinyurl.com/yxx3trj9",
+    "title": "Duolingo",
+    "companyName": "Duolingo, Inc.",
+    "id": 15,
+    "description": "Duolingo is a fun and free language learning app with gamified lessons. It offers over 30 languages and helps you learn speaking, listening, and writing. Progress tracking and streaks keep learners motivated. Its playful design makes education enjoyable for all ages.",
+    "size": 70,
+    "reviews": 16000000,
+    "ratingAvg": 4.7,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 120000 },
+      { "name": "2 star", "count": 200000 },
+      { "name": "3 star", "count": 600000 },
+      { "name": "4 star", "count": 2400000 },
+      { "name": "5 star", "count": 12700000 }
+    ]
+  },
+  {
+    "image": "https://tinyurl.com/ycx9htkz",
+    "title": "Pinterest",
+    "companyName": "Pinterest, Inc.",
+    "id": 16,
+    "description": "Pinterest lets you discover and save creative ideas for recipes, fashion, home decor, and more. Users create boards to organize pins visually. Its personalized feed inspires millions of creators and DIY enthusiasts. Pinterest is a digital mood board for all your interests.",
+    "size": 90,
+    "reviews": 9000000,
+    "ratingAvg": 4.6,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 150000 },
+      { "name": "2 star", "count": 250000 },
+      { "name": "3 star", "count": 700000 },
+      { "name": "4 star", "count": 2100000 },
+      { "name": "5 star", "count": 5700000 }
+    ]
+  },
+  {
+    "image": "https://tinyurl.com/4v946r8k// ",
+    "title": "Amazon Shopping",
+    "companyName": "Amazon Mobile LLC",
+    "id": 17,
+    "description": "Amazon lets you shop millions of products across categories like electronics, books, and fashion. It offers secure payment, fast delivery, and easy returns. Users can track orders, leave reviews, and explore daily deals. Prime members enjoy free shipping and exclusive offers.",
+    "size": 160,
+    "reviews": 40000000,
+    "ratingAvg": 4.5,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 500000 },
+      { "name": "2 star", "count": 700000 },
+      { "name": "3 star", "count": 2200000 },
+      { "name": "4 star", "count": 8800000 },
+      { "name": "5 star", "count": 28000000 }
+    ]
+  },
+  {
+    "image": "https://shorturl.at/ltJD5",
+    "title": "LinkedIn",
+    "companyName": "LinkedIn Corporation",
+    "id": 18,
+    "description": "LinkedIn is the world’s largest professional networking platform. It helps users build connections, find jobs, and share professional achievements. Businesses use it for hiring and brand building. It’s a go-to platform for career growth and learning new skills.",
+    "size": 100,
+    "reviews": 8000000,
+    "ratingAvg": 4.4,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 150000 },
+      { "name": "2 star", "count": 250000 },
+      { "name": "3 star", "count": 800000 },
+      { "name": "4 star", "count": 2400000 },
+      { "name": "5 star", "count": 470000}
+    ]
+}
+]
