@@ -2,3 +2,6 @@
 @plugin "daisyui" {
   themes: light --default, dark ;
 }
+a.active {
+  @apply border-2 border-[#632EE3] text-transparent bg-clip-text bg-gradient-to-l from-[#9F62F2] to-[#632EE3]
+}

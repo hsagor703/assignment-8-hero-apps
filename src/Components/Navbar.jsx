@@ -1,11 +1,12 @@
 import React from "react";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
 import { Github } from "lucide-react";
+import { Link, NavLink } from "react-router";
 const Navbar = () => {
   return (
-    <div className="shadow-2xl">
+    <div className="shadow-md">
       <div className="container mx-auto ">
-        <div className="navbar bg-base-100 px-5">
+        <div className="navbar bg-base-100 ">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -34,36 +35,47 @@ const Navbar = () => {
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
               >
                 <li>
-                  <a>Item 1</a>
+                  <NavLink to="/">Home</NavLink>
                 </li>
-
                 <li>
-                  <a>Item 3</a>
+                  <NavLink to="/apps">Apps</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/installation">Installation</NavLink>
                 </li>
               </ul>
             </div>
 
             <div className="flex items-center">
               <img className="h-10" src={logo} alt="logo" />
-              <a className=" text-xl font-medium text-transparent bg-clip-text bg-gradient-to-l from-[#9F62F2] to-[#632EE3]">HERO.IO</a>
+              <Link to='/' className=" text-xl font-medium text-transparent bg-clip-text bg-gradient-to-l from-[#9F62F2] to-[#632EE3]">
+                HERO.IO
+              </Link>
             </div>
-
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 font-medium">
               <li>
-                <a>Home</a>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <a> Apps</a>
+                <NavLink to="/apps">Apps</NavLink>
               </li>
               <li>
-                <a>Installation</a>
+                <NavLink to="/installation">Installation</NavLink>
               </li>
             </ul>
           </div>
           <div className="navbar-end">
-            <a target="blank" href="https://github.com/hsagor703?tab=repositories" className="btn  h-14 bg-linear-to-tl from-[#9F62F2] to-[#632EE3]"> <Github className="bg-white p-1 rounded-full" /> <span className="text-white">Contribute</span></a>
+            <a
+              target="blank"
+              href="https://github.com/hsagor703?tab=repositories"
+              className="btn  h-14 bg-linear-to-tl from-[#9F62F2] to-[#632EE3]"
+            >
+              {" "}
+              <Github className="bg-white p-1 rounded-full" />{" "}
+              <span className="text-white">Contribute</span>
+            </a>
           </div>
         </div>
       </div>
