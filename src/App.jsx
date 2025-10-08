@@ -1,12 +1,14 @@
 
 import './App.css'
+import Footer from './Components/Footer'
+import Navbar from './Components/Navbar'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-teal-400'>Vite + React</h1>
-      
+      <Navbar/>
+      <Footer/>
     </>
   )
 }
