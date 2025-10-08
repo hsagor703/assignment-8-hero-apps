@@ -12,7 +12,7 @@ const TrendingApps = () => {
         <p className="mb-10 text-[#627382]">Explore All Trending Apps on the Market developed by us</p>
       </div>
 
-      <div className="grid md:grid-cols-4 grid-cols-1 gap-5">
+      <div className="grid md:grid-cols-3 lg:grid-cols-4 grid-cols-1 gap-10 md:gap-5 p-3 md:p-0">
         {
             cuttingData.map(appData => <SomeApps key={appData.id} appData={appData}></SomeApps>)
         }

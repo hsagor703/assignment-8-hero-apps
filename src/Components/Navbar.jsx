@@ -1,7 +1,10 @@
 import React from "react";
 import logo from "../assets/logo.png";
-import { Github } from "lucide-react";
+import { Github, House } from "lucide-react";
 import { Link, NavLink } from "react-router";
+import home from '../assets/home.jpg'
+import app from '../assets/pngegg.png'
+import install from '../assets/icon-downloads.png'
 const Navbar = () => {
   return (
     <div className="shadow-md">
@@ -47,22 +50,27 @@ const Navbar = () => {
             </div>
 
             <div className="flex items-center">
-              <img className="h-10" src={logo} alt="logo" />
-              <Link to='/' className=" text-xl font-medium text-transparent bg-clip-text bg-gradient-to-l from-[#9F62F2] to-[#632EE3]">
+              <Link to='/' className="flex items-center">
+                <img className="h-10" src={logo} alt="logo" />
+              <h1
+                to="/"
+                className=" text-xl font-medium text-transparent bg-clip-text bg-gradient-to-l from-[#9F62F2] to-[#632EE3]"
+              >
                 HERO.IO
+              </h1>
               </Link>
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 font-medium">
               <li>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/"><img className="h-5" src={home} alt="" /> Home</NavLink>
               </li>
               <li>
-                <NavLink to="/apps">Apps</NavLink>
+                <NavLink to="/apps"> <img className="h-5" src={app} alt="" />Apps</NavLink>
               </li>
               <li>
-                <NavLink to="/installation">Installation</NavLink>
+                <NavLink to="/installation"> <img className="h-5" src={install} alt="" />Installation</NavLink>
               </li>
             </ul>
           </div>
