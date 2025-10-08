@@ -12,10 +12,13 @@ const Router = createBrowserRouter([
       {
         path: "/",
         Component: Home,
+        loader: () => fetch('appsData.json')
       },
       {
         path: "/apps",
         Component: Apps,
+        loader: () => fetch('appsData.json')
+
       },
       {
         path:'/installation',
