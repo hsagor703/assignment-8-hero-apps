@@ -7,7 +7,7 @@
     "id": 1,
     "description": "Spotify is a music streaming app that offers millions of tracks, albums, and podcasts. You can create and share playlists, follow artists, and explore new music based on your listening taste. With Spotify Premium, users enjoy offline playback, ad-free streaming, and high-quality audio. The app also curates personalized mixes like Discover Weekly to keep your experience fresh.",
     "size": 110,
-    "reviews": 25300000,
+    "reviews": "253K",
     "ratingAvg": 4.5,
     "downloads": "1M",
     "ratings": [
@@ -26,7 +26,7 @@
     "id": 2,
     "description": "Instagram lets you capture and share life’s moments with photos, videos, and stories. It offers tools for creative editing, filters, and reels for short videos. Users can connect with friends, follow influencers, and discover trends through hashtags and the Explore tab. Businesses and creators use Instagram to reach global audiences and grow communities.",
     "size": 95,
-    "reviews": 32000000,
+    "reviews": "32K",
     "ratingAvg": 4.4,
     "downloads": "5M",
     "ratings": [
@@ -45,7 +45,7 @@
     "id": 3,
     "description": "Facebook helps you stay connected with friends, family, and communities. You can share posts, photos, and videos or join groups and pages that match your interests. The Marketplace feature allows buying and selling locally. With regular updates, Facebook remains a key hub for communication, business, and social discovery worldwide.",
     "size": 180,
-    "reviews": 54000000,
+    "reviews": "54k",
     "ratingAvg": 4.1,
     "downloads": "5.4M",
     "ratings": [
@@ -64,7 +64,7 @@
     "id": 4,
     "description": "WhatsApp lets you send text, voice, and video messages securely with end-to-end encryption. You can share documents, photos, and locations, and make group calls easily. Its fast, reliable connection works on both mobile and desktop. Businesses use WhatsApp to connect directly with customers through WhatsApp Business.",
     "size": 90,
-    "reviews": 35000000,
+    "reviews": "35K",
     "ratingAvg": 4.7,
     "downloads": "3.5M",
     "ratings": [
@@ -83,7 +83,7 @@
     "id": 5,
     "description": "TikTok allows users to create and explore short, entertaining videos. With tons of effects, sounds, and filters, it’s a hub for creativity. From dances to tutorials, TikTok’s algorithm learns what you love and delivers endless entertainment. It has become a powerful platform for creators and brands alike.",
     "size": 150,
-    "reviews": 21000000,
+    "reviews": "21K",
     "ratingAvg": 4.3,
     "downloads": "3M",
     "ratings": [
@@ -102,7 +102,7 @@
     "id": 6,
     "description": "YouTube is the most popular platform for watching and sharing videos. From tutorials to entertainment, users can find anything they like. Creators can earn income through ads and memberships. YouTube Premium offers ad-free viewing, background play, and offline downloads for an uninterrupted experience.",
     "size": 120,
-    "reviews": 41000000,
+    "reviews": "410K",
     "ratingAvg": 4.6,
     "downloads": "5M",
     "ratings": [
@@ -121,7 +121,7 @@
     "id": 7,
     "description": "Snapchat lets you send disappearing photos and videos called Snaps. It includes filters, Bitmoji, and AR lenses for fun communication. Users can share daily moments through Stories and explore new content on Discover. Its privacy-first approach makes it popular among young audiences.",
     "size": 95,
-    "reviews": 12000000,
+    "reviews": "12K",
     "ratingAvg": 4.2,
     "downloads": "2M",
     "ratings": [
@@ -140,7 +140,7 @@
     "id": 8,
     "description": "X, previously known as Twitter, is a social media app for real-time conversations and updates. Users share short posts, follow trending topics, and join discussions. It’s widely used for news, politics, and entertainment. The platform now includes Spaces, long-form posts, and monetization options for creators.",
     "size": 100,
-    "reviews": 22000000,
+    "reviews": "220K",
     "ratingAvg": 4.1,
     "downloads": "2M",
     "ratings": [
@@ -159,7 +159,7 @@
     "id": 9,
     "description": "Telegram offers secure, fast messaging with powerful features like channels, bots, and cloud storage. It supports media sharing up to 2GB per file and syncs across devices seamlessly. Telegram is known for privacy, speed, and a community-driven approach. It’s ideal for both casual and professional communication.",
     "size": 80,
-    "reviews": 9000000,
+    "reviews": "90K",
     "ratingAvg": 4.7,
     "downloads": "10M",
     "ratings": [
@@ -178,7 +178,7 @@
     "id": 10,
     "description": "Netflix lets users stream thousands of movies, series, and documentaries. It offers content across multiple languages and genres. Users can download episodes for offline viewing and set up separate profiles. Netflix Originals like Stranger Things and Money Heist have redefined digital entertainment.",
     "size": 180,
-    "reviews": 15000000,
+    "reviews": "150K",
     "ratingAvg": 4.5,
     "downloads": "10M",
     "ratings": [
@@ -197,7 +197,7 @@
     "id": 11,
     "description": "Gmail is a free email service by Google, offering a clean and powerful interface. It includes smart categorization, spam protection, and integration with Google Drive and Meet. With 15GB of free storage, Gmail is widely used for both personal and business communication. It also supports multiple accounts and dark mode.",
     "size": 60,
-    "reviews": 29000000,
+    "reviews": "29K",
     "ratingAvg": 4.6,
     "downloads": "5M",
     "ratings": [
@@ -216,7 +216,7 @@
     "id": 12,
     "description": "Zoom enables video meetings, webinars, and online collaboration. It provides HD video, chat, and screen sharing features for personal and professional use. With breakout rooms and recording options, Zoom is perfect for remote teams. The app is used globally for classes, meetings, and conferences.",
     "size": 130,
-    "reviews": 8000000,
+    "reviews": "80K",
     "ratingAvg": 4.3,
     "downloads": "10M",
     "ratings": [
@@ -235,7 +235,7 @@
     "id": 13,
     "description": "Canva is a design tool that lets anyone create stunning visuals easily. You can design posters, social media posts, and presentations using pre-made templates. Canva Pro offers advanced tools and brand kits for businesses. It’s ideal for designers, marketers, and students alike.",
     "size": 120,
-    "reviews": 7000000,
+    "reviews": "70K",
     "ratingAvg": 4.8,
     "downloads": "5M",
     "ratings": [
@@ -254,7 +254,7 @@
     "id": 14,
     "description": "Uber connects riders with drivers in minutes. You can book rides, estimate fares, and track your trip in real-time. Uber offers multiple ride options from affordable to premium. It also provides safety features, digital payments, and 24/7 support.",
     "size": 85,
-    "reviews": 21000000,
+    "reviews": "21K",
     "ratingAvg": 4.5,
     "downloads": "10M",
     "ratings": [
@@ -273,7 +273,7 @@
     "id": 15,
     "description": "Duolingo is a fun and free language learning app with gamified lessons. It offers over 30 languages and helps you learn speaking, listening, and writing. Progress tracking and streaks keep learners motivated. Its playful design makes education enjoyable for all ages.",
     "size": 70,
-    "reviews": 16000000,
+    "reviews": "16K",
     "ratingAvg": 4.7,
     "downloads": "5M",
     "ratings": [
@@ -292,7 +292,7 @@
     "id": 16,
     "description": "Pinterest lets you discover and save creative ideas for recipes, fashion, home decor, and more. Users create boards to organize pins visually. Its personalized feed inspires millions of creators and DIY enthusiasts. Pinterest is a digital mood board for all your interests.",
     "size": 90,
-    "reviews": 9000000,
+    "reviews": "90K",
     "ratingAvg": 4.6,
     "downloads": "1M",
     "ratings": [
@@ -311,7 +311,7 @@
     "id": 17,
     "description": "Amazon lets you shop millions of products across categories like electronics, books, and fashion. It offers secure payment, fast delivery, and easy returns. Users can track orders, leave reviews, and explore daily deals. Prime members enjoy free shipping and exclusive offers.",
     "size": 160,
-    "reviews": 40000000,
+    "reviews": "40K",
     "ratingAvg": 4.5,
     "downloads": "10M",
     "ratings": [
@@ -330,7 +330,7 @@
     "id": 18,
     "description": "LinkedIn is the world’s largest professional networking platform. It helps users build connections, find jobs, and share professional achievements. Businesses use it for hiring and brand building. It’s a go-to platform for career growth and learning new skills.",
     "size": 100,
-    "reviews": 8000000,
+    "reviews": "80K",
     "ratingAvg": 4.4,
     "downloads": "10M",
     "ratings": [

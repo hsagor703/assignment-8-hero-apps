@@ -1,14 +1,15 @@
 import React from "react";
 import ratingStart from "../assets/icon-ratings.png";
 import download from "../assets/icon-downloads.png";
+import { Link } from "react-router";
 const SomeApps = ({ appData }) => {
-  const { image, title, subtitle, ratingAvg, downloads } = appData;
+  const { image, id, title, subtitle, ratingAvg, downloads } = appData;
   return (
-    <div>
+    <Link to={`/appDetails/${id}`}>
       <div className="card bg-base-100  shadow-sm">
         <figure className="md:h-48 overflow-hidden">
           <img
-            className="w-full object-cover hover:scale-110 transition ease-in-out"
+            className=" hover:scale-110 transition ease-in-out"
             src={image}
             alt="Shoes"
           />
@@ -27,7 +28,7 @@ const SomeApps = ({ appData }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
