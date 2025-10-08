@@ -1,18 +1,26 @@
 import React, { useState } from "react";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import AllApps from "../Components/AllApps.Jsx";
+import appError from "../assets/App-Error.png";
 const Apps = () => {
   const allApp = useLoaderData();
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const searchData = search.trim().toLocaleLowerCase();
-  const filterData = searchData ? allApp.filter(app => app.title.trim().toLocaleLowerCase().includes(searchData)) : allApp
-  console.log(filterData);
-  console.log(searchData);
-  // const handleSearch = (() => {
-  //   const searchData = search.trim().toLocaleLowerCase()
-  //   const filterData = allApp.filter(app => app.title.trim().toLocaleLowerCase().includes(searchData))
-  //   setSearch(filterData)
-  // }) ()
+  const filterData = searchData
+    ? allApp.filter((app) =>
+        app.title.trim().toLocaleLowerCase().includes(searchData)
+      )
+    : allApp;
+  if (filterData.length === 0) {
+    return (
+      <div className="text-center my-10 space-y-3">
+        <img className="mx-auto w-68" src={appError} alt="" />
+        <h2 className="text-[#001931] text-4xl font-semibold">OPPS!! APP NOT FOUND</h2>
+        <p className="text-[#627382]">The App you are requesting is not found on our system.  please try another apps</p>
+        <Link to='/' className="btn bg-linear-to-tl from-[#9F62F2] to-[#632EE3] text-white">Go Back!</Link>
+      </div>
+    );
+  }
   return (
     <div>
       <div className="container mx-auto my-10">
@@ -42,7 +50,13 @@ const Apps = () => {
                 <path d="m21 21-4.3-4.3"></path>
               </g>
             </svg>
-            <input value={search} onChange={(e) => setSearch(e.target.value)} type="search" required placeholder="Search Apps" />
+            <input
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              type="search"
+              required
+              placeholder="Search Apps"
+            />
           </label>
         </div>
 
