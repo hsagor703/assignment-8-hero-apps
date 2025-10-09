@@ -5,7 +5,7 @@ import { Link } from "lucide-react";
 const Footer = () => {
   return (
     <div className="bg-base-300">
-      <footer className="footer sm:footer-horizontal  text-base-content py-10 container mx-auto">
+      <footer className="footer sm:footer-horizontal  text-base-content py-10 container mx-auto px-3 md:px-0">
         <div className="flex items-center">
           <img className="h-10" src={logo} alt="logo" />
           <div

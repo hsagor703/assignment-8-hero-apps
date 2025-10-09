@@ -7,7 +7,7 @@ const TrendingApps = () => {
   const cuttingData = appsData.slice(0, 8);
   return (
     <div className="container mx-auto mb-10">
-      <div className="text-center space-y-5">
+      <div className="text-center space-y-5 ">
         <h1 className="text-4xl font-bold">Trending Apps</h1>
         <p className="mb-10 text-[#627382]">Explore All Trending Apps on the Market developed by us</p>
       </div>
