@@ -39,6 +39,7 @@ const AppDetails = () => {
 
   const btnHandle = () => {
     if (visited) {
+      // react toast 
       toast(
         <div className="flex items-center gap-3">
           <span>
@@ -58,6 +59,7 @@ const AppDetails = () => {
       updatedList = [...existItem, findData]
       const isSame = existItem.some(appData => appData.id === findData.id);
       if (isSame) {
+        // normal alert pore thik korbo 
         return alert("already installed")
       }
     } else {
@@ -124,7 +126,7 @@ const AppDetails = () => {
         <h1 className="text-2xl font-semibold text-[#001931]">Description</h1>
         <p className="mb-5 text-[#627382]">{description}</p>
       </div>
-      <ToastContainer position="top-center" />
+      <ToastContainer />
     </div>
   );
 };
