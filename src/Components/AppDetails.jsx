@@ -51,6 +51,20 @@ const AppDetails = () => {
       );
     }
     setVisited(false);
+
+    const existItem = JSON.parse(localStorage.getItem("installItem"));
+    let updatedList = [];
+    if (existItem) {
+      updatedList = [...existItem, findData]
+      const isSame = existItem.some(appData => appData.id === findData.id);
+      if (isSame) {
+        return alert("already installed")
+      }
+    } else {
+      updatedList.push(findData)
+    }
+    localStorage.setItem("installItem", JSON.stringify( updatedList))
+
   };
 
   return (
