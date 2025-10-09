@@ -2,9 +2,8 @@ import { Download } from "lucide-react";
 import React from "react";
 import rating from "../assets/icon-ratings.png";
 
-const InstalledItem = ({ item }) => {
-  console.log(item);
-  const { image, title, subtitle, downloads, size, ratingAvg } = item;
+const InstalledItem = ({ item, handleUninstall }) => {
+  const { image, title, subtitle, downloads, size, ratingAvg, id} = item;
   return (
     <div className="my-5 ">
       <div className="md:flex items-center justify-between bg-gray-200 p-3 rounded-xl">
@@ -28,7 +27,7 @@ const InstalledItem = ({ item }) => {
           </div>
         </div>
 
-        <button className="btn md:mt-0 mt-2 bg-green-600 text-white ">Uninstall</button>
+        <button onClick={() => handleUninstall(id)} className="btn md:mt-0 mt-2 bg-green-600 text-white ">Uninstall</button>
       </div>
     </div>
   );

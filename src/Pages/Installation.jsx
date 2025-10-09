@@ -11,6 +11,14 @@ const Installation = () => {
       setInstalledItem(getInstallItemToLocalStorage);
     }
   }, []);
+
+
+  const handleUninstall = (id) => {
+    const getItemToLocalStorage = JSON.parse(localStorage.getItem('installItem'));
+    let filterData = getItemToLocalStorage.filter(item => item.id !== id);
+    setInstalledItem(filterData)
+    localStorage.setItem("installItem", JSON.stringify(filterData))
+  }
   return (
     <div>
       <div className="container mx-auto my-10">
@@ -32,7 +40,7 @@ const Installation = () => {
 
         <div>
             {
-                installedItem.map(item => <InstalledItem key={item.id} item={item}></InstalledItem>)
+                installedItem.map(item => <InstalledItem key={item.id} item={item} handleUninstall={handleUninstall}></InstalledItem>)
             }
         </div>
       </div>
