@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import useCustomHook from "../CustomHooks/CustomHook";
 import { Check, CircleCheckBig, Download, OctagonAlert } from "lucide-react";
@@ -22,7 +22,7 @@ const AppDetails = () => {
   const { appData, loading, error } = useCustomHook();
   const { id } = useParams();
   if (loading) {
-    return <LoadingSpiner/>;
+    return <LoadingSpiner />;
   }
   const findData = appData.find((app) => app.id === Number(id));
   const {
@@ -39,9 +39,10 @@ const AppDetails = () => {
   } = findData;
 
   const btnHandle = (e) => {
-    const tName = (e.target.parentNode.children[0].innerText);
-    const nName = tName.replace(":Share your moments", "");
-    console.log(nName);
+    // const tName = e.target.parentNode.children[0].innerText;
+    // const nName = tName.replace(":Share your moments", "");
+
+
     if (visited) {
       // react toast
       toast(
@@ -57,7 +58,7 @@ const AppDetails = () => {
         </div>
       );
     }
-    setVisited(false);
+    setVisited(false)
 
     const existItem = JSON.parse(localStorage.getItem("installItem"));
 
@@ -68,7 +69,8 @@ const AppDetails = () => {
       if (isSame) {
         return toast(
           <div className="flex justify-center gap-3">
-            <OctagonAlert color="#f10e0e" size={35} /> <span className="text-xl"> already installed </span> 
+            <OctagonAlert color="#f10e0e" size={35} />{" "}
+            <span className="text-xl"> already installed </span>
           </div>
         );
       }
@@ -76,9 +78,6 @@ const AppDetails = () => {
       updatedList.push(findData);
     }
     localStorage.setItem("installItem", JSON.stringify(updatedList));
-
-
-
   };
 
   return (

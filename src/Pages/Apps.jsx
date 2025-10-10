@@ -6,20 +6,35 @@ import LoadingSpiner from "./LoadingSpiner";
 import useCustomHook from "../CustomHooks/CustomHook";
 const Apps = () => {
   const { appData, loading } = useCustomHook();
+  const [load, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const searchData = search.trim().toLocaleLowerCase();
 
- 
-    const filterData = searchData
+
+  // for live search loading 
+  useEffect(() => {
+    if (search === "") {
+      setLoading(false);
+      return;
+    } else {
+      setLoading(true);
+      const t = setTimeout(() => {
+        setLoading(false);
+      }, 300);
+      return () => clearTimeout(t);
+    }
+  }, [search]);
+
+  const filterData = searchData
     ? appData.filter((app) =>
         app.title.trim().toLocaleLowerCase().includes(searchData)
       )
     : appData;
 
-
   if (filterData.length === 0) {
-    return (
-      loading ? <LoadingSpiner/> :
+    return loading ? (
+      <LoadingSpiner />
+    ) : (
       <div className="text-center my-10 space-y-3">
         <img className="mx-auto w-68" src={appError} alt="" />
         <h2 className="text-[#001931] text-4xl font-semibold">
@@ -78,10 +93,17 @@ const Apps = () => {
         </div>
 
         <div className="grid md:grid-cols-3 lg:grid-cols-4 grid-cols-1 gap-10 md:gap-5 p-3 md:p-0">
-          { filterData.map((apps) => (
-            loading ? <LoadingSpiner/> :
-            <AllApps key={apps.id} apps={apps}></AllApps>
-          ))}
+          {load ? (
+            <LoadingSpiner />
+          ) : (
+            filterData.map((apps) =>
+              loading ? (
+                <LoadingSpiner />
+              ) : (
+                <AllApps key={apps.id} apps={apps}></AllApps>
+              )
+            )
+          )}
         </div>
       </div>
     </div>
