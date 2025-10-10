@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ratingStart from "../assets/icon-ratings.png";
 import download from "../assets/icon-downloads.png";
 import { Link } from "react-router";
+import LoadingSpiner from "../Pages/LoadingSpiner";
 const AllApps = ({apps}) => {
   const { image, id, title, subtitle, ratingAvg, downloads } = apps;
   return (

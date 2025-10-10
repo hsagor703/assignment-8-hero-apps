@@ -1,23 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router";
 import AllApps from "../Components/AllApps.Jsx";
 import appError from "../assets/App-Error.png";
+import LoadingSpiner from "./LoadingSpiner";
+import useCustomHook from "../CustomHooks/CustomHook";
 const Apps = () => {
-  const allApp = useLoaderData();
+  const { appData, loading } = useCustomHook();
   const [search, setSearch] = useState("");
   const searchData = search.trim().toLocaleLowerCase();
-  const filterData = searchData
-    ? allApp.filter((app) =>
+
+ 
+    const filterData = searchData
+    ? appData.filter((app) =>
         app.title.trim().toLocaleLowerCase().includes(searchData)
       )
-    : allApp;
+    : appData;
+
+
   if (filterData.length === 0) {
     return (
+      loading ? <LoadingSpiner/> :
       <div className="text-center my-10 space-y-3">
         <img className="mx-auto w-68" src={appError} alt="" />
-        <h2 className="text-[#001931] text-4xl font-semibold">OPPS!! APP NOT FOUND</h2>
-        <p className="text-[#627382]">The App you are requesting is not found on our system.  please try another apps</p>
-        <Link to='/' className="btn bg-linear-to-tl from-[#9F62F2] to-[#632EE3] text-white">Go Back!</Link>
+        <h2 className="text-[#001931] text-4xl font-semibold">
+          OPPS!! APP NOT FOUND
+        </h2>
+        <p className="text-[#627382]">
+          The App you are requesting is not found on our system. please try
+          another apps
+        </p>
+        <Link
+          to="/"
+          className="btn bg-linear-to-tl from-[#9F62F2] to-[#632EE3] text-white"
+        >
+          Go Back!
+        </Link>
       </div>
     );
   }
@@ -61,7 +78,8 @@ const Apps = () => {
         </div>
 
         <div className="grid md:grid-cols-3 lg:grid-cols-4 grid-cols-1 gap-10 md:gap-5 p-3 md:p-0">
-          {filterData.map((apps) => (
+          { filterData.map((apps) => (
+            loading ? <LoadingSpiner/> :
             <AllApps key={apps.id} apps={apps}></AllApps>
           ))}
         </div>

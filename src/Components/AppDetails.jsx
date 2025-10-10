@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import useCustomHook from "../CustomHooks/CustomHook";
-import { Check, CircleCheckBig, Download } from "lucide-react";
+import { Check, CircleCheckBig, Download, OctagonAlert } from "lucide-react";
 import star from "../assets/icon-ratings.png";
 import like from "../assets/icon-review.png";
 import {
@@ -37,16 +37,21 @@ const AppDetails = () => {
     companyName,
   } = findData;
 
-  const btnHandle = () => {
+  const btnHandle = (e) => {
+    const tName = (e.target.parentNode.children[0].innerText);
+    const nName = tName.replace(":Share your moments", "");
+    console.log(nName);
     if (visited) {
-      // react toast 
+      // react toast
       toast(
         <div className="flex items-center gap-3">
           <span>
             <CircleCheckBig size={38} className="text-green-500" />
           </span>
           <div>
-            <h2>Yahoo ⚡{title}: {subtitle} Installed Successfully</h2>
+            <h2>
+              Yahoo ⚡{title}: {subtitle} Installed Successfully
+            </h2>
           </div>
         </div>
       );
@@ -54,24 +59,30 @@ const AppDetails = () => {
     setVisited(false);
 
     const existItem = JSON.parse(localStorage.getItem("installItem"));
+
     let updatedList = [];
     if (existItem) {
-      updatedList = [...existItem, findData]
-      const isSame = existItem.some(appData => appData.id === findData.id);
+      updatedList = [...existItem, findData];
+      const isSame = existItem.some((appData) => appData.id === findData.id);
       if (isSame) {
-        // normal alert pore thik korbo 
-        return alert("already installed")
+        return toast(
+          <div className="flex justify-center gap-3">
+            <OctagonAlert color="#f10e0e" size={35} /> <span className="text-xl"> already installed </span> 
+          </div>
+        );
       }
     } else {
-      updatedList.push(findData)
+      updatedList.push(findData);
     }
-    localStorage.setItem("installItem", JSON.stringify( updatedList))
+    localStorage.setItem("installItem", JSON.stringify(updatedList));
+
+
 
   };
 
   return (
     <div className="container mx-auto p-5 md:p-0">
-      <div className="md:flex items-center gap-10 my-10">
+      <div className="md:flex items-center gap-10 my-10 ">
         <div>
           <img className="h-52 rounded-2xl" src={image} alt="" />
         </div>

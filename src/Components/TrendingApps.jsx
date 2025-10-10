@@ -1,10 +1,13 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router";
 import SomeApps from "./SomeApps";
+import useCustomHook from "../CustomHooks/CustomHook";
+import LoadingSpiner from "../Pages/LoadingSpiner";
 
 const TrendingApps = () => {
-  const appsData = useLoaderData();
-  const cuttingData = appsData.slice(0, 8);
+  const {appData, loading, error} = useCustomHook();
+  console.log({appData, loading, error});
+  const cuttingData = appData.slice(0, 8);
   return (
     <div className="container mx-auto mb-10">
       <div className="text-center space-y-5 ">
@@ -12,8 +15,9 @@ const TrendingApps = () => {
         <p className="mb-10 text-[#627382]">Explore All Trending Apps on the Market developed by us</p>
       </div>
 
-      <div className="grid md:grid-cols-3 lg:grid-cols-4 grid-cols-1 gap-10 md:gap-5 p-3 md:p-0">
+      <div className="grid md:grid-cols-3 lg:grid-cols-4 grid-cols-1 gap-10 md:gap-5 p-3 md:p-0 ">
         {
+          loading? <LoadingSpiner/>:
             cuttingData.map(appData => <SomeApps key={appData.id} appData={appData}></SomeApps>)
         }
     </div>

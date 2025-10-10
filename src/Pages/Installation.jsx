@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import InstalledItem from "../Components/InstalledItem";
 import { toast, ToastContainer } from "react-toastify";
 import { Trash2 } from "lucide-react";
+import useCustomHook from "../CustomHooks/CustomHook";
+import LoadingSpiner from "./LoadingSpiner";
 
 const Installation = () => {
+  const {appData, loading} = useCustomHook()
   const [installedItem, setInstalledItem] = useState([]);
-  console.log(installedItem);
   const [sort, setSort] = useState("none");
-  console.log(sort);
   useEffect(() => {
     const getInstallItemToLocalStorage = JSON.parse(
       localStorage.getItem("installItem")
@@ -38,10 +39,10 @@ const Installation = () => {
 
   // (Number(a.downloads.replace("M", "")),Number(b.downloads.replace("M", "")))
   const sortItem = (() => {
-    if (sort === "increase") {
+    if (sort === "decrease") {
       return [...installedItem].sort((a, b) => Number(a.downloads.replace("M", "")) - Number(b.downloads.replace("M", "")));
   
-    } else if (sort === "decrease") {
+    } else if (sort === "increase") {
       return [...installedItem].sort((a, b) =>Number(b.downloads.replace("M", "")) - Number(a.downloads.replace("M", "")));
     } else {
       return installedItem;
@@ -67,13 +68,13 @@ const Installation = () => {
               className="select select-info"
             >
               <option value="none">Sort By</option>
-              <option value="increase">High-Low</option>
-              <option value="decrease">Low-High</option>
+              <option value="increase">High-&gt;Low</option>
+              <option value="decrease">Low-&gt;High</option>
             </select>
         </div>
 
         <div>
-          {sortItem.map((item) => (
+          {loading? <LoadingSpiner/> : sortItem.map((item) => (
             <InstalledItem
               key={item.id}
               item={item}
