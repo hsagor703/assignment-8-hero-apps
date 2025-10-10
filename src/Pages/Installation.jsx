@@ -25,6 +25,11 @@ const Installation = () => {
     let filterData = getItemToLocalStorage.filter((item) => item.id !== id);
     setInstalledItem(filterData);
     localStorage.setItem("installItem", JSON.stringify(filterData));
+
+
+
+
+
     toast(
       <div className="flex items-center gap-3">
         <span>

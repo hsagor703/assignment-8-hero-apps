@@ -37,7 +37,6 @@ const Router = createBrowserRouter([
         errorElement:<AppsError/>,
         hydrateFallbackElement: <LoadingSpiner/>,
         Component: AppDetails,
-        // loader: () => fetch('appsData.json')
       },
     ],
   },

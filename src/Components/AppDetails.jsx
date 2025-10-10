@@ -15,13 +15,14 @@ import {
   YAxis,
 } from "recharts";
 import { toast, ToastContainer } from "react-toastify";
+import LoadingSpiner from "../Pages/LoadingSpiner";
 
 const AppDetails = () => {
   const [visited, setVisited] = useState(true);
   const { appData, loading, error } = useCustomHook();
   const { id } = useParams();
   if (loading) {
-    return <p>loading...</p>;
+    return <LoadingSpiner/>;
   }
   const findData = appData.find((app) => app.id === Number(id));
   const {
