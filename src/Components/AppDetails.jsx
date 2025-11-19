@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router";
+import { useParams } from "react-router";
 import useCustomHook from "../CustomHooks/CustomHook";
 import { Check, CircleCheckBig, Download, OctagonAlert } from "lucide-react";
 import star from "../assets/icon-ratings.png";
@@ -21,64 +21,133 @@ const AppDetails = () => {
   const [visited, setVisited] = useState(true);
   const { appData, loading, error } = useCustomHook();
   const { id } = useParams();
-  if (loading) {
-    return <LoadingSpiner />;
-  }
-  const findData = appData.find((app) => app.id === Number(id));
+
+  const findData =
+    !loading && !error ? appData.find((app) => app.id === Number(id)) : null;
+
+  useEffect(() => {
+    if (!findData) return; 
+    const existItem = JSON.parse(localStorage.getItem("installItem")) || [];
+    const alreadyExist = existItem.some((exist) => exist.id === findData.id);
+    setVisited(!alreadyExist);
+  }, [findData]);
+
+  const btnHandle = () => {
+    if (!findData) return;
+
+    const existItem = JSON.parse(localStorage.getItem("installItem")) || [];
+    const isSame = existItem.some((appData) => appData.id === findData.id);
+
+    if (isSame) {
+      setVisited(false);
+      return toast(
+        <div className="flex items-center gap-3">
+          <OctagonAlert color="#f10e0e" size={35} />
+          <span className="text-lg font-medium">Already Installed</span>
+        </div>
+      );
+    }
+
+    const updatedList = [...existItem, findData];
+    localStorage.setItem("installItem", JSON.stringify(updatedList));
+    setVisited(false);
+
+    toast(
+      <div className="flex items-center gap-3">
+        <CircleCheckBig size={38} className="text-green-500" />
+        <div>
+          <h2 className="font-semibold">
+            ✅ Yahoo ⚡ {findData.title}: {findData.subtitle} Installed
+            Successfully!
+          </h2>
+        </div>
+      </div>
+    );
+  };
+
+  // 🟩 এখন safe return
+  if (loading) return <LoadingSpiner />;
+  if (error) return <p className="text-red-500">Failed to load data!</p>;
+  if (!findData) return <p className="text-center">App not found</p>;
+
   const {
     title,
     subtitle,
     image,
     downloads,
     ratingAvg,
-    ratings,
     reviews,
-    size,
+    ratings,
     description,
     companyName,
   } = findData;
 
-  const btnHandle = (e) => {
-    // const tName = e.target.parentNode.children[0].innerText;
-    // const nName = tName.replace(":Share your moments", "");
+  // const [visited, setVisited] = useState(true);
+  // const { appData, loading, error } = useCustomHook();
+  // const { id } = useParams();
 
+  // const findData =!loading && !error ? appData.find((app) => app.id === Number(id)) : null;
 
-    if (visited) {
-      // react toast
-      toast(
-        <div className="flex items-center gap-3">
-          <span>
-            <CircleCheckBig size={38} className="text-green-500" />
-          </span>
-          <div>
-            <h2>
-              Yahoo ⚡{title}: {subtitle} Installed Successfully
-            </h2>
-          </div>
-        </div>
-      );
-    }
-    setVisited(false)
+  // useEffect(() => {
+  //   if(!findData) return
+  //   const existItem = JSON.parse(localStorage.getItem("installItem")) || [];
+  //   const isAlreadyExist =  existItem.some(exist => exist.id === findData.id)
+  //   setVisited(!isAlreadyExist)
+  // },[findData.id])
 
-    const existItem = JSON.parse(localStorage.getItem("installItem"));
+  // const btnHandle = () => {
+  //   if (!findData) return
 
-    let updatedList = [];
-    if (existItem) {
-      updatedList = [...existItem, findData];
-      const isSame = existItem.some((appData) => appData.id === findData.id);
-      if (isSame) {
-        return toast(
-          <div className="flex justify-center gap-3">
-            <OctagonAlert color="#f10e0e" size={35} />{" "}
-            <span className="text-xl"> already installed </span>
-          </div>
-        );
-      }
-    } else {
-      updatedList.push(findData);
-    }
-    localStorage.setItem("installItem", JSON.stringify(updatedList));
-  };
+  //   const existItem = JSON.parse(localStorage.getItem("installItem"));
+  //   let updatedList = [];
+  //   if (existItem) {
+  //     updatedList = [...existItem, findData];
+  //     const isSame = existItem.some((appData) => appData.id === findData.id);
+  //     if (isSame) {
+  //       setVisited(false)
+  //       return toast(
+  //         <div className="flex justify-center gap-3">
+  //           <OctagonAlert color="#f10e0e" size={35} />{" "}
+  //           <span className="text-xl"> already installed </span>
+  //         </div>
+  //       );
+  //     }
+  //   } else {
+  //     updatedList.push(findData);
+  //   }
+  //   localStorage.setItem("installItem", JSON.stringify(updatedList));
+  //   if (visited) {
+  //     // react toast
+  //     toast(
+  //       <div className="flex items-center gap-3">
+  //         <span>
+  //           <CircleCheckBig size={38} className="text-green-500" />
+  //         </span>
+  //         <div>
+  //           <h2>
+  //             Yahoo ⚡{title}: {subtitle} Installed Successfully
+  //           </h2>
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  // };
+
+  // if (loading) return <LoadingSpiner />;
+  // if (error) return <p> some error here </p>
+  // if (!findData) return <p> not found any data </p>
+  // const {
+  //   title,
+  //   subtitle,
+  //   image,
+  //   downloads,
+  //   ratingAvg,
+  //   ratings,
+  //   reviews,
+  //   size,
+  //   description,
+  //   companyName,
+  // } = findData;
 
   return (
     <div className="container mx-auto p-5 md:p-0">
